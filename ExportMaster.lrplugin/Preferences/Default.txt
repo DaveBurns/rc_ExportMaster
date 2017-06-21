@@ -1,0 +1,28 @@
+--[[
+        Plugin configuration file (aka 'Advanced Settings').
+        
+        Note: Named members of return table are accessible in source code as:
+        
+            app:getPref( name )
+            
+            provided there is no app:initPref( name, val ) or app:setPref( name, val ) statements executed prior,
+            which hide/override the named members in this file.
+--]]
+
+-- declare return table
+local _t = {}
+
+-- delay before correcting keywords (in seconds - decimal values OK).
+-- Increase up to 5 seconds if necessary to eliminate metadata conflicts.
+-- Decrease down to 0 to optimize performance, if not having metadata conflicts.
+-- The default is .5
+_t.correctionDelay = .5
+
+-- delay before saving metadata (in seconds - decimal values OK).
+-- Increase up to 5 seconds if necessary to eliminate metadata conflicts.
+-- Decrease down to 0 to optimize performance, if not having metadata conflicts.
+-- The default is 1.
+_t.saveMetadataDelay = 1.0
+
+-- return config table
+return _t
